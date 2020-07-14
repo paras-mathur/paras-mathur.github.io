@@ -54,16 +54,6 @@
 
     var userId = "user123Random";
     var name   = "";
-    
-    var items = Array('India','Japan');
-    var item = items[Math.floor(Math.random() * items.length)];
-    
-    console.log("Country here is - " + item);
-    
-    const attributes = {
-		  country: 'India',
-		  is_logged_in: true,
-		};
   
     function enterFunction() {
         userId = document.getElementById("user-id").value;
@@ -71,7 +61,7 @@
         $(".Step1").hide();
         $(".Step2").show();
 
-        var enabled = optimizelyClientInstance.isFeatureEnabled('test', userId, attributes);
+        var enabled = optimizelyClientInstance.isFeatureEnabled('test', userId);
         var variableInfo = optimizelyClientInstance.getFeatureVariableString('test', 'user', userId);
 
         console.log(" FEATURED is " + enabled);
