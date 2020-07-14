@@ -54,6 +54,10 @@
 
     var userId = "user123Random";
     var name   = "";
+    
+    var attributes = {
+       "country": "India"
+    };
   
     function enterFunction() {
         userId = document.getElementById("user-id").value;
@@ -61,7 +65,7 @@
         $(".Step1").hide();
         $(".Step2").show();
 
-        var enabled = optimizelyClientInstance.isFeatureEnabled('test', userId);
+        var enabled = optimizelyClientInstance.isFeatureEnabled('test', userId, attributes);
         var variableInfo = optimizelyClientInstance.getFeatureVariableString('test', 'user', userId);
 
         console.log(" FEATURED is " + enabled);
