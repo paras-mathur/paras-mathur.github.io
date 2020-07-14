@@ -67,7 +67,7 @@
         console.log(" FEATURED is " + enabled);
         optimizelyClientInstance.track('landed-on', userId);
 
-        document.getElementById("name-span").value = name;
+        document.getElementById("name-span").innerHTML = name;
 
         showButton(variableInfo);
 
