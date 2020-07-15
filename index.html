@@ -67,9 +67,9 @@
         $(".Step2").show();
 
         var enabled = optimizelyClientInstance.isFeatureEnabled('test', userId, attributes);
-        var variableInfo = optimizelyClientInstance.getFeatureVariableString('test', 'user', userId);
+        var variableInfo = optimizelyClientInstance.getFeatureVariable('test', 'user', "zzzz", attributes);
 
-        console.log(" FEATURED is " + enabled);
+        console.log(" FEATURE is " + enabled);
         optimizelyClientInstance.track('landed-on', userId);
 
         document.getElementById("name-span").innerHTML = name;
